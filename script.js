@@ -52,17 +52,16 @@ function generatePreview() {
 function downloadPDF() {
   const element = document.getElementById('previewArea');
 
-  // Wait briefly before generating PDF to ensure render
+  const opt = {
+    margin:       0.5,
+    filename:     'resume.pdf',
+    image:        { type: 'jpeg', quality: 0.98 },
+    html2canvas:  { scale: 2, useCORS: true },
+    jsPDF:        { unit: 'in', format: 'a4', orientation: 'portrait' }
+  };
+
+  // Delay to ensure DOM is fully rendered
   setTimeout(() => {
-    html2pdf()
-      .set({
-        margin: 0.5,
-        filename: 'resume.pdf',
-        image: { type: 'jpeg', quality: 0.98 },
-        html2canvas: { scale: 2 },
-        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
-      })
-      .from(element)
-      .save();
-  }, 300);
-      }
+    html2pdf().set(opt).from(element).save();
+  }, 300); // 300ms delay
+}
