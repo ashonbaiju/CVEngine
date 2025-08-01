@@ -50,6 +50,19 @@ function generatePreview() {
 }
 
 function downloadPDF() {
-  const element = document.getElementById("previewArea");
-  html2pdf().from(element).save("resume.pdf");
-}
+  const element = document.getElementById('previewArea');
+
+  // Wait briefly before generating PDF to ensure render
+  setTimeout(() => {
+    html2pdf()
+      .set({
+        margin: 0.5,
+        filename: 'resume.pdf',
+        image: { type: 'jpeg', quality: 0.98 },
+        html2canvas: { scale: 2 },
+        jsPDF: { unit: 'in', format: 'letter', orientation: 'portrait' }
+      })
+      .from(element)
+      .save();
+  }, 300);
+      }
