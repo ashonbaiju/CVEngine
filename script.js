@@ -63,3 +63,15 @@ function downloadPDF() {
     .from(element)
     .save();
                     }
+html2pdf()
+  .set({...})
+  .from(element)
+  .outputPdf('bloburl')
+  .then(function(pdfUrl) {
+    const link = document.createElement('a');
+    link.href = pdfUrl;
+    link.download = 'resume.pdf';
+    document.body.appendChild(link);
+    link.click();
+    document.body.removeChild(link);
+  });
