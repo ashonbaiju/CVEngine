@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Select Resume Template</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Resume Template</h1>
+    <div class="templates">
+      <div class="template-card" onclick="selectTemplate('minimalist')">
+        <img src="assets/template1-preview.png" alt="Minimalist Template" />
+        <p>Minimalist Resume</p>
+      </div>
+      <div class="template-card" onclick="selectTemplate('tech')">
+        <img src="assets/template2-preview.png" alt="Tech Template" />
+        <p>Tech Professional Resume</p>
+      </div>
+    </div>
+    <button onclick="continueToBuilder()">Continue</button>
+  </div>
+
+  <script>
+    function selectTemplate(name) {
+      localStorage.setItem("selectedTemplate", name);
+      alert("Selected: " + name.toUpperCase() + " template");
+    }
+
+    function continueToBuilder() {
+      window.location.href = "builder.html";
+    }
+  </script>
+</body>
+</html>

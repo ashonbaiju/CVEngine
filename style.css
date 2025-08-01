@@ -1,0 +1,79 @@
+body {
+  font-family: sans-serif;
+  background: #f5f5f5;
+  padding: 30px;
+}
+
+.container {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: auto;
+}
+
+label {
+  display: block;
+  margin-top: 10px;
+}
+
+input, textarea {
+  width: 100%;
+  padding: 8px;
+  margin-top: 4px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+button {
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: purple;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.preview {
+  margin-top: 30px;
+  padding: 20px;
+  background: #eeeeee;
+  border-radius: 8px;
+}
+
+/* Minimalist Template */
+.template-minimalist {
+  font-family: 'Arial';
+}
+
+.template-minimalist h1 {
+  font-size: 28px;
+  margin-bottom: 0;
+}
+
+.template-minimalist h2 {
+  font-size: 20px;
+  margin-top: 4px;
+  color: #444;
+}
+
+/* Tech Template */
+.template-tech {
+  font-family: 'Segoe UI';
+}
+
+.template-tech h1 {
+  font-size: 26px;
+  color: #222;
+}
+
+.template-tech h2 {
+  font-size: 18px;
+  color: #444;
+}
+
+.template-tech h3 {
+  margin-top: 20px;
+  color: #333;
+}

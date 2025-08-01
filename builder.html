@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h2>Fill in Your Resume Details</h2>
+
+    <div class="form-group">
+      <label>Name</label>
+      <input id="name" type="text" />
+      
+      <label>Job Title</label>
+      <input id="title" type="text" />
+
+      <label>Email</label>
+      <input id="email" type="email" />
+
+      <label>Phone</label>
+      <input id="phone" type="text" />
+
+      <label>Address</label>
+      <input id="address" type="text" />
+
+      <label>Summary / About Me</label>
+      <textarea id="summary"></textarea>
+
+      <label>Education</label>
+      <textarea id="education"></textarea>
+
+      <label>Experience</label>
+      <textarea id="experience"></textarea>
+
+      <label>Skills</label>
+      <textarea id="skills"></textarea>
+
+      <label>Certifications / Awards / Languages (For Tech Resume)</label>
+      <textarea id="extra"></textarea>
+    </div>
+
+    <button onclick="generatePreview()">Preview Resume</button>
+    <button onclick="downloadPDF()">Download as PDF</button>
+
+    <div id="previewArea" class="preview" style="display:none;"></div>
+  </div>
+
+  <script src="html2pdf.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
